@@ -8,17 +8,17 @@ Thank you! &lt;3
 
 ## Table of Content
 
-##### <a href="#introduction">Introduction</a>
-<a href="#what-is-a-hoodie-plugin">What is a Hoodie plugin?</a><br />
-<a href="#what-can-a-hoodie-plugin-do">What can a Hoodie plugin do?</a><br />
+- <a href="#introduction">Introduction</a>
+- <a href="#what-is-a-hoodie-plugin">What is a Hoodie plugin?</a>
+- <a href="#what-can-a-hoodie-plugin-do">What can a Hoodie plugin do?</a>
 
-##### <a href="#prerequisites">Prerequisites</a>
-<a href="#the-hoodie-architecture">The Hoodie Architecture</a><br />
-<a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a><br />
+- <a href="#prerequisites">Prerequisites</a>
+- <a href="#the-hoodie-architecture">The Hoodie Architecture</a>
+- <a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a>
 
-##### <a href="#prerequisites">Prerequisites</a>
-<a href="#the-hoodie-architecture">The Hoodie Architecture</a><br />
-<a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a><br />
+- <a href="#prerequisites">Prerequisites</a>
+- <a href="#the-hoodie-architecture">The Hoodie Architecture</a>
+- <a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a>
 
 
 # Building plugins for Hoodie
