@@ -1,6 +1,7 @@
 # Very Important:
 
-Some of the things described in this document don’t yet reflect the current implementation of the code. You should be able to get started, but it can be a little rough around the edges :)
+This tutorial is still a work in progress. If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an issue. <3
+
 
 # Building plugins for Hoodie
 
@@ -380,3 +381,6 @@ It's as simple as `npm publish`.
 #### Installing your plugin:
 
 Inside your Hoodie application, simply run `npm install hoodie-plugin-direct-messages`.
+
+#### Template to start
+https://github.com/hoodiehq/hoodie-plugin-template
