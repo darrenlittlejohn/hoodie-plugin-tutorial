@@ -8,23 +8,36 @@ Thank you! &lt;3
 
 ## Table of Content
 
-1. <a href="#introduction">Introduction</a> <br/>
-<a href="#what-is-a-hoodie-plugin">What is a Hoodie plugin?</a><br/>
-<a href="#what-can-a-hoodie-plugin-do">What can a Hoodie plugin do?</a>
+##### 1. Introduction
+- <a href="#introduction">Intro</a>
+- <a href="#what-is-a-hoodie-plugin">What is a Hoodie plugin?</a>
+- <a href="#what-can-a-hoodie-plugin-do">What can a Hoodie plugin do?</a>
 
-2. <a href="#prerequisites">Prerequisites</a><br/>
-<a href="#the-hoodie-architecture">The Hoodie Architecture</a><br/>
-<a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a>
+##### 2. Prerequisites
+- <a href="#prerequisites">Prerequisites</a>
+- <a href="#the-hoodie-architecture">The Hoodie Architecture</a>
+- <a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a>
 
-3. <a href="#lets-build-a-direct-messaging-plugin">Let's Build a Direct Messaging Plugin</a><br/>
-<a href="#how-will-this-work">How Will this Work?</a><br/>
-<a href="#where-to-start">Where to Start</a><br/><br/>
-<a href="#structuring-a-plugin">Structuring a Plugin</a><br/><br/>
-<a href="#the-direct-messaging-plugins-frontend-component">The Direct Messaging Plugin's Frontend Component</a><br/>
-<a href="#the-direct-messaging-plugins-backend-component">The Direct Messaging Plugin's Backend Component</a>
+##### 3. Build a plugin
+- <a href="#lets-build-a-direct-messaging-plugin">Let's Build a Direct Messaging Plugin</a>
+- <a href="#how-will-this-work">How Will this Work?</a>
+- <a href="#where-to-start">Where to Start</a> <br/><br />
+- <a href="#structuring-a-plugin">Structuring a Plugin</a><br /><br />
+- <a href="#the-direct-messaging-plugins-frontend-component">The Direct Messaging Plugin's Frontend Component</a>
+- <a href="#the-direct-messaging-plugins-backend-component">The Direct Messaging Plugin's Backend Component</a>
+- <a href="#extending-pocket-with-your-plugins-own-admin-panel">Extending Pocket with your Plugin's own Admin Panel</a>
+<br /><br />
+- <a href="#the-packagejson"> The package.json </a>
 
+##### 4. Testing
+- <a href="#">writing tests</a>
 
-# Building plugins for Hoodie
+##### 5. Deployment
+- <a href="#deploying-your-plugin-to-npm">Deploying your Plugin to NPM</a>
+
+##### 6. Start with the template
+- <a href="#template-to-start">Start with the template</a>
+
 
 ## Introduction
 
