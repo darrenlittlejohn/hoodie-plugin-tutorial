@@ -8,18 +8,20 @@ Thank you! &lt;3
 
 ## Table of Content
 
-1. <a href="#introduction">Introduction</a>
+1. <a href="#introduction">Introduction</a> <br/>
+<a href="#what-is-a-hoodie-plugin">What is a Hoodie plugin?</a><br/>
+<a href="#what-can-a-hoodie-plugin-do">What can a Hoodie plugin do?</a>
 
-* <a href="#what-is-a-hoodie-plugin">What is a Hoodie plugin?</a>
-* <a href="#what-can-a-hoodie-plugin-do">What can a Hoodie plugin do?</a>
+2. <a href="#prerequisites">Prerequisites</a><br/>
+<a href="#the-hoodie-architecture">The Hoodie Architecture</a><br/>
+<a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a>
 
-2. <a href="#prerequisites">Prerequisites</a>
-+ <a href="#the-hoodie-architecture">The Hoodie Architecture</a>
-+ <a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a>
-
-3. <a href="#prerequisites">Prerequisites</a>
-+ <a href="#the-hoodie-architecture">The Hoodie Architecture</a>
-+ <a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a>
+3. <a href="#lets-build-a-direct-messaging-plugin">Let's Build a Direct Messaging Plugin</a><br/>
+<a href="#how-will-this-work">How Will this Work?</a><br/>
+<a href="#where-to-start">Where to Start</a>
+<a href="#where-to-start">Where to Start</a>
+<a href="#where-to-start">Where to Start</a>
+<a href="#where-to-start">Where to Start</a>
 
 
 # Building plugins for Hoodie
