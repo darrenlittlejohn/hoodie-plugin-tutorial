@@ -18,10 +18,10 @@ Thank you! &lt;3
 
 3. <a href="#lets-build-a-direct-messaging-plugin">Let's Build a Direct Messaging Plugin</a><br/>
 <a href="#how-will-this-work">How Will this Work?</a><br/>
-<a href="#where-to-start">Where to Start</a>
-<a href="#where-to-start">Where to Start</a>
-<a href="#where-to-start">Where to Start</a>
-<a href="#where-to-start">Where to Start</a>
+<a href="#where-to-start">Where to Start</a><br/><br/>
+<a href="#structuring-a-plugin">Structuring a Plugin</a><br/><br/>
+<a href="#the-direct-messaging-plugins-frontend-component">The Direct Messaging Plugin's Frontend Component</a><br/>
+<a href="#the-direct-messaging-plugins-backend-component">The Direct Messaging Plugin's Backend Component</a>
 
 
 # Building plugins for Hoodie
