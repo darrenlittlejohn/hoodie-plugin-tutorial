@@ -12,7 +12,7 @@ If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an i
 
 <a href="#Prerequisites">Prerequisites</a><br/>
 <a href="#Architecture">The Hoodie Architecture</a><br />
-<a href="#API">The Plugin API and Tasks</a><br />
+<a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a><br />
 
 
 
