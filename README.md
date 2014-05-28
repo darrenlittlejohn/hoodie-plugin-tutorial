@@ -6,6 +6,11 @@ If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an i
 
 # Building plugins for Hoodie
 
+## <a id="Introduction"></a>Introduction ##
+
+something here
+
+
 ## Introduction
 
 Hoodie is a small core that handles data storage, sync and authentification. Everything else is a plugin that can be added to this core. Our goal is to make Hoodie as extensible as possible, while keeping the core tiny, so you can add the modules you need and just them.
