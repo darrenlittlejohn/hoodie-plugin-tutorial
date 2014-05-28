@@ -22,7 +22,7 @@ If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an i
 
 Hoodie is a small core that handles data storage, sync and authentification. Everything else is a plugin that can be added to this core. Our goal is to make Hoodie as extensible as possible, while keeping the core tiny, so you can add the modules you need and just them.
 
-### <a id="What">What is a Hoodie plugin?</a>
+### What is a Hoodie plugin?
 
 Hoodie plugins have three distinct parts, and you will need at least one of them. They are:
 
@@ -30,7 +30,7 @@ Hoodie plugins have three distinct parts, and you will need at least one of them
 - __A backend component__, that exports the server / database functionality to the plugin, written in Node.js.
 - __An admin view__, which is an HTML fragment with associated styles and JS code that appears in your Hoodie admin dashboard. So you can interact with the user in the dashboard, get some required data / configuration if you want or just give out statistics.
 
-### <a id="Do">What can a Hoodie plugin do?</a>
+### What can a Hoodie plugin do?
 
 In short, anything Hoodie can do. A plugin can work in Hoodie's Node.js backend and manipulate the database or talk to other services, it can extend the Hoodie frontend library's API, and it can appear in the admin dashboard, each Hoodie app has, and extend that with new stats, functions and whatever else you can think of.
 
@@ -43,15 +43,15 @@ You could…
 - securely authenticate with github (or any other service, really) and send data back and forth
 - extend Hoodie so signed-up users can send direct messages to each other
 
-## <a id="Prerequisites">Prerequisites</a>
+## Prerequisites
 
 All you need to write a Hoodie plugin is a running Hoodie app. Your plugin lives directly in the app's `node_modules` directory and must be referenced in its `package.json`, just like any other npm module. You don't have to register and maintain it as an npm module once it is complete, but we'd like to be able to use npm's infrastructure for finding and installing Hoodie plugins, so we'd also like to encourage you to use it as well. We'll explain how to do this at the end of this document.
 
-### <a id="Architecture">The Hoodie Architecture</a>
+### The Hoodie Architecture
 
 If you haven't seen it yet, now is a good time to browse through [the explanation of the Hoodie stack](http://hood.ie/intro.html), and how it differs from what you might be used to. One of Hoodie's core strengths is that it is offline first, which means the application (and therefore your plugin) should work regardless of the user's connection status. We do this by not letting the frontend send tasks to the backend directly. Instead, the frontend deposits tasks in the database, which, you might remember, is both local and remote and syncs whenever it can. These tasks are then picked up by the backend, which acts upon these tasks. When completed, the database emits corresponding events, which can then in turn be acted upon by the frontend. For this, we provide you with a Plugin API, which handles generating and managing these tasks, as well as a number of other things you'll probably want to do a lot of, like writing stuff to user databases and so on.
 
-### <a id="API">The Plugin API and Tasks</a>
+### The Plugin API and Tasks
 
 Currently, the only way to get the backend component of a plugin to do anything is with a task. A task is a slightly special object that can be saved into the database from the Hoodie frontend. Your plugin's backend component can listen to the events emitted when a task appears, and then do whatever it is you want it to do. You could create a task to send a private message in the frontend, for example:
 
