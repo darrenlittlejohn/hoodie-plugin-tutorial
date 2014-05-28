@@ -1,19 +1,24 @@
 ## Very Important:
 
 This tutorial is still a work in progress. 
-If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an issue. <3
+If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an issue. 
+
+Thank you! &lt;3
 
 
 ## Table of Content
 
-<a href="#introduction">Introduction</a><br />
+##### <a href="#introduction">Introduction</a>
 <a href="#what-is-a-hoodie-plugin">What is a Hoodie plugin?</a><br />
 <a href="#what-can-a-hoodie-plugin-do">What can a Hoodie plugin do?</a><br />
 
-<a href="#prerequisites">Prerequisites</a><br/>
+##### <a href="#prerequisites">Prerequisites</a>
 <a href="#the-hoodie-architecture">The Hoodie Architecture</a><br />
 <a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a><br />
 
+##### <a href="#prerequisites">Prerequisites</a>
+<a href="#the-hoodie-architecture">The Hoodie Architecture</a><br />
+<a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a><br />
 
 
 # Building plugins for Hoodie
@@ -28,11 +33,11 @@ Hoodie plugins have three distinct parts, and you will need at least one of them
 
 - __A frontend component__ that extends the Hoodie API in your frontend, written in Javascript.
 - __A backend component__, that exports the server / database functionality to the plugin, written in Node.js.
-- __An admin view__, which is an HTML fragment with associated styles and JS code that appears in your Hoodie admin dashboard. So you can interact with the user in the dashboard, get some required data / configuration if you want or just give out statistics.
+- __An admin view__, which is an interface written in HTML, CSS and JS, that appears in your Hoodie admin dashboard to give you the option to interact with the user e.g. configurate the plugin.
 
 ### What can a Hoodie plugin do?
 
-In short, anything Hoodie can do. A plugin can work in Hoodie's Node.js backend and manipulate the database or talk to other services, it can extend the Hoodie frontend library's API, and it can appear in the admin dashboard, each Hoodie app has, and extend that with new stats, functions and whatever else you can think of.
+In short, anything Hoodie can do. A plugin can work in Hoodie's Node.js backend and manipulate the database or talk to other services, it can extend the Hoodie frontend library's API, and it can appear in the admin dashboard, each Hoodie app has, and extend that with new stats, configurations and whatever else you can think of.
 
 ### Example plugins
 
