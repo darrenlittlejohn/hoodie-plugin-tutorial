@@ -6,19 +6,19 @@ If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an i
 
 ## Table of Content
 
-<a href="#Introduction">Introduction</a><br />
-<a href="#What">What is a Hoodie plugin?</a><br />
-<a href="#Do">What can a Hoodie plugin do?</a><br />
+<a href="#introduction">Introduction</a><br />
+<a href="#what-is-a-hoodie-plugin">What is a Hoodie plugin?</a><br />
+<a href="#what-can-a-hoodie-plugin-do">What can a Hoodie plugin do?</a><br />
 
-<a href="#Prerequisites">Prerequisites</a><br/>
-<a href="#Architecture">The Hoodie Architecture</a><br />
+<a href="#prerequisites">Prerequisites</a><br/>
+<a href="#the-hoodie-architecture">The Hoodie Architecture</a><br />
 <a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a><br />
 
 
 
 # Building plugins for Hoodie
 
-## <a id="Introduction">Introduction</a>
+## Introduction
 
 Hoodie is a small core that handles data storage, sync and authentification. Everything else is a plugin that can be added to this core. Our goal is to make Hoodie as extensible as possible, while keeping the core tiny, so you can add the modules you need and just them.
 
