@@ -41,36 +41,38 @@ Thank you! &lt;3
 
 ## Introduction
 
-Hoodie is a small core that handles data storage, sync and authentification. Everything else is a plugin that can be added to this core. Our goal is to make Hoodie as extensible as possible, while keeping the core tiny, so you can add the modules you need and just them.
+Hoodie's API offers a small set of core features that handle data storage, sync and authentication. All other functionality you may need can be added by building plugins. Our goal is to so make Hoodie as extensible as possible, while keeping the core tiny, so you can add the modules _you_ need and just them.
 
-### What is a Hoodie plugin?
+### What can Hoodie plugins do?
 
-Hoodie plugins have three distinct parts, and you will need at least one of them. They are:
-
-- __A frontend component__ that extends the Hoodie API in your frontend, written in Javascript.
-- __A backend component__, that exports the server / database functionality to the plugin, written in Node.js.
-- __An admin view__, which is an interface written in HTML, CSS and JS, that appears in your Hoodie admin dashboard to give you the option to interact with the user e.g. configurate the plugin.
-
-### What can a Hoodie plugin do?
-
-In short, anything Hoodie can do. A plugin can work in Hoodie's Node.js backend and manipulate the database or talk to other services, it can extend the Hoodie frontend library's API, and it can appear in the admin dashboard, each Hoodie app has, and extend that with new stats, configurations and whatever else you can think of.
+In short, anything Hoodie can do. A plugin can work in Hoodie's Node.js backend and manipulate the database or talk to other services, it can extend the Hoodie frontend library's API, and it can appear in the admin dashboard that each Hoodie app has, and extend that with new stats, configurations and whatever else you can think of.
 
 ### Example plugins
 
-You could…
+You could …
 
-- log special events and send out emails to yourself whenever something catastrophic/wonderful happens
-- have node resize any images uploaded to your app, generate a couple of thumbnail versions, save them to S3 and reference them in your database
-- securely authenticate with github (or any other service, really) and send data back and forth
+- log special events and send out emails to yourself whenever something catastrophic / wonderful happens (a bit like your own IFTTT for your app)
+- make Node.js resize any images uploaded to your app, generate a couple of thumbnail versions, save them to S3 or another server and reference them in your database
+- securely authenticate your users with services like Twitter or GitHub and exchange data
 - extend Hoodie so signed-up users can send direct messages to each other
 
-## Prerequisites
+## Prerequisites: preparations for getting started
 
-All you need to write a Hoodie plugin is a running Hoodie app. Your plugin lives directly in the app's `node_modules` directory and must be referenced in its `package.json`, just like any other npm module. You don't have to register and maintain it as an npm module once it is complete, but we'd like to be able to use npm's infrastructure for finding and installing Hoodie plugins, so we'd also like to encourage you to use it as well. We'll explain how to do this at the end of this document.
+All you need for writing a Hoodie plugin is a running Hoodie app. Your plugin lives directly in the app's `node_modules` directory and must be referenced in its `package.json`, just like any other npm module. You don't have to register and maintain it as an npm module once it is complete.  
+(As we'd like to be able to use npm's infrastructure for helping people find and install Hoodie plugins in the longterm, we still want to encourage you to use it as well, this would help the community a lot. We'll explain how to do this at the end of this document.)
 
 ### The Hoodie Architecture
 
-If you haven't seen it yet, now is a good time to browse through [the explanation of the Hoodie stack](http://hood.ie/intro.html), and how it differs from what you might be used to. One of Hoodie's core strengths is that it is offline first, which means the application (and therefore your plugin) should work regardless of the user's connection status. We do this by not letting the frontend send tasks to the backend directly. Instead, the frontend deposits tasks in the database, which, you might remember, is both local and remote and syncs whenever it can. These tasks are then picked up by the backend, which acts upon these tasks. When completed, the database emits corresponding events, which can then in turn be acted upon by the frontend. For this, we provide you with a Plugin API, which handles generating and managing these tasks, as well as a number of other things you'll probably want to do a lot of, like writing stuff to user databases and so on.
+If you haven't seen it yet, now is a good time to browse through [the explanation of the Hoodie stack](http://hood.ie/intro.html), and how it differs from what you might be used to. One of Hoodie's most powerful features is that it is offline first, which means all Hoodie-applications (and therefore also your plugin) work anytime, regardless of the user's connection status. This works because we don't let the frontend send tasks to the backend directly in Hoodie-Apps. Instead, the frontend deposits tasks in the database, which is both local and remote, and syncs whenever it can (which means: whenever it detects internet connection; if there's none, it doesn't care). After sync, these tasks are picked up by the backend, which acts accordingly to what it's told to do by the tasks. When completed, the database emits corresponding events, which then the frontend can act upon.  
+Thus, we provide you with a Plugin API that handles generating and managing these tasks, writing stuff to user databases and so all other things you may need for building _your_ plugin.
+
+### Which components do Plugins have?
+
+Hoodie plugins have three distinct parts, and you will need at least one of them (depending on what you want your plugin to do). They are:
+
+- __A frontend component__ that extends the Hoodie API in your frontend, written in Javascript.
+- __A backend component__ that exports the server / database functionality to the plugin, written in Node.js.
+- __An admin view__, which is an interface written in HTML, CSS and JS, that appears in your Hoodie admin dashboard to give you the option to interact with the user e.g. configurate the plugin.
 
 ### The Plugin API and Tasks
 
