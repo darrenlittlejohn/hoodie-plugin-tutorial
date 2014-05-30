@@ -337,7 +337,7 @@ You'll get some basic styles and behaviour for many elements, but be aware that 
 You can also have drag n' drop file uploads, please consult the aforementioned `index.html` as well as `/_api/_plugins/_assets/scripts/main.js` for an example of the frontend aspect of this.
 
 In the near future, this will all be part of the default plugin template, so you can get started more easily.
-See this [documentation][http://hoodiehq.github.io/hoodie-pocket-UIKit/] for further information
+See this [documentation](http://hoodiehq.github.io/hoodie-pocket-UIKit/) for further information
 
 Let's start with the easy bit:
 
