@@ -30,7 +30,7 @@ Thank you! &lt;3
 - <a href="#the-packagejson"> The package.json </a>
 
 ##### 4. Testing
-- <a href="#">writing tests</a>
+- <a href="#writing-tests">Writing tests</a>
 
 ##### 5. Deployment
 - <a href="#deploying-your-plugin-to-npm">Deploying your Plugin to NPM</a>
@@ -409,6 +409,9 @@ The package.json is required by node.js. For our plugin, it will look like this:
       "version": "1.0.0",
       "main": "worker.js"
     }
+
+#### Writing tests
+coming soon
 
 #### Deploying your Plugin to NPM
 
