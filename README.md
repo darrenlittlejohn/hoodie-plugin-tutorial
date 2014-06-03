@@ -320,7 +320,7 @@ To do this, you must provide a `/pocket` directory in your plugin's root directo
 
 Hoodie will provide a UIKit with some useful CSS/JS that you can load if you want. Ideally, you won't have to write a single line of CSS to make your plugin's panel look good, but we're not *quite* there yet.
 
-**Note: this is very new and requires `node_modules/hoodie-server/hoodie-pocket-uikit to have a version >= 2.0.0**
+**Note: this is very new and requires `node_modules/hoodie-server/hoodie-pocket-uikit` to have version 2.0.0 or higher. Every new Hoodie app created with `$hoodie new appName` should include this new version by default, if not, you may have to `$ hoodie cache clean`.** 
 
 Here's a preview:
 
@@ -332,20 +332,15 @@ Put this in the `<head>`:`<link rel="stylesheet" href="/_api/_plugins/_assets/st
 And this before the closing `</body>` tag: `<script src="/_api/_plugins/_assets/scripts/pocket-uikit.js"></script>
 `
 
-`pocket-uikit.js` includes a bunch of stuff, among them jQuery and the Bootstrap libraries, plus everything to make checkboxes, radio buttons and dropdowns nicer (this is all automatic, don't sweat it).
+`pocket-uikit.js` includes a bunch of stuff, among them jQuery and the Bootstrap libraries, plus everything to make checkboxes, radio buttons and dropdowns nicer (this is all automatic), plus drag-n-drop file uploads with image previews. Please consult the [UIKit guide](http://hoodiehq.github.io/hoodie-pocket-UIKit/) for further information, examples and copy-and-pastable markup.
 
-You'll get some basic styles and behaviour for many elements, but be aware that the UIKit isn't complete yet. For now, check out `http://yourhoodieURL/_api/_plugins/_assets/index.html` in your browser for some example code (This will be refactored into a nicer doc with easy copy and paste of elements and UI blocks soon).
-
-You can also have drag n' drop file uploads, please consult the aforementioned `index.html` as well as `/_api/_plugins/_assets/scripts/main.js` for an example of the frontend aspect of this.
-
-In the near future, this will all be part of the default plugin template, so you can get started more easily.
-See this [documentation](http://hoodiehq.github.io/hoodie-pocket-UIKit/) for further information
+In the near future, this will all be part of the default plugin template, so you'll have a nice scaffolding to work with.
 
 Let's start with the easy bit:
 
 ##### Styling your Plugin's Admin Panel
 
-As noted, your admin panel will have Pocket's styles applied by default. Pocket is built with Bootstrap (currently 2.3.2), so all plugin developers can rely on a set of components they know will be sensibly styled by default. You're completely free to omit these styles, should you want to do something spectacular.
+As noted, your admin panel can have Pocket's styles applied by default. The UIKit is built with Bootstrap (currently 2.3.2), so all plugin developers can rely on a set of components they know will be sensibly styled by default. You're completely free to omit these styles, should you want to do something spectacular.
 
 ##### Sending Messages from Pocket
 
