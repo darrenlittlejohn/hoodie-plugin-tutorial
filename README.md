@@ -220,7 +220,7 @@ Let's look at the whole thing first:
           if (error) {
             return hoodie.task.error(originDb, message, error);
           };
-          var targetDb = 'user/' + user.ownerHash;
+          var targetDb = 'user/' + user.hoodieId;
           hoodie.database(targetDb).add('directmessage', message, addMessageCallback);
         });
       };
@@ -258,7 +258,7 @@ We also need to find the recipient's database, so we can write the message to it
 
 The sender may have made a mistake and the recipient may not exist. In this case, we call `task.error()` and pass in the message and the error so we can deal with the problem where neccessary. This will emit an `error` event that you can listen for both in the front- _and/or_ the backend with `task.on()`. In our case, we were just passing them through our plugin's frontend component to let the app author deal with it. Internally, Hoodie knows which task the error refers to through the `message` object and its unique id.
 
-    var targetDb = 'user/' + user.ownerHash;
+    var targetDb = 'user/' + user.hoodieId;
 
 We still haven't got the recipient's database, which is what we do here. In CouchDB, database names consist of a type prefix (in this case: `user`), a slash, and an id. We recommend using Futon to find out what individual objects and databases are called. Now we get to the main point:
 
