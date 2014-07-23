@@ -344,6 +344,8 @@ As noted, your admin panel can have Admin Dashboard's styles applied by default.
 
 ##### Sending Messages from Admin Dashboard
 
+__IMPORTANT__: `hoodieAdmin` is currently being rewritten and __isn't usable yet__. We'll update this document as soon as that changes. Until then, [this issue](https://github.com/hoodiehq/hoodie-plugin-tutorial/issues/3) may help.
+
 Admin Dashboard has a special version of Hoodie, called HoodieAdmin. It offers several APIs by default, like `hoodieAdmin.signIn(password)`, `hoodie.users.findAll`, and [more](https://github.com/hoodiehq/hoodie.admin.js).
 
 It can be extended just like the standard Hoodie library:
@@ -375,6 +377,8 @@ It can be extended just like the standard Hoodie library:
 Now `hoodie.directMessages.send` can be used the same way by the admin in admin-dashboard as it can be used by the users of the app. The only difference is that other users cannot send messages to the admin, as it's a special kind of account.
 
 ##### Getting and Setting Plugin Configurations
+
+__IMPORTANT__: `hoodieAdmin` is currently being rewritten and __isn't usable yet__. We'll update this document as soon as that changes. Until then, [this issue](https://github.com/hoodiehq/hoodie-plugin-tutorial/issues/3) may help.
 
 To get / set a plugin's config, you can use `hoodieAdmin.plugin.getConfig('direct-messages')` & `hoodieAdmin.plugin.updateConfig('direct-messages', config)`. `config` is a simple object with key/value settings.
 
