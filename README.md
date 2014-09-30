@@ -87,10 +87,12 @@ Hoodie plugins have three distinct parts, and you will need at least one of them
 
 Currently, the only way to get the backend component of a plugin to do anything is with a task. A task is a slightly special object that can be saved into the database from the Hoodie frontend. Your plugin's backend component can listen to the events emitted when a task appears, and then do whatever it is you want it to do. You could create a task to send a private message in the frontend, for example:
 
+```javascript
     hoodie.task.start('directmessage', {
         'to': 'Ricardo',
         'body': 'Hello there! How are things? We're hurtling through space! Wish you were here :)'
     });
+```
 
 And in your backend component, listen for that task appearing and act upon it:
 
