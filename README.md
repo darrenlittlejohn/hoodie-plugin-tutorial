@@ -10,9 +10,10 @@ If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an i
 
 **1. Introduction** 
 
-* [Introduction](#Introduction)
-* [What is a hoodieplugin](what-is-a-hoodie-plugin)
-* [What can a Hoodie plugin do?](what-can-a-hoodie-plugin-do)
+- [Introduction](#introduction)
+- [What can a hoodie plugin do?](#what-can-a-hoodie-plugin-do)
+- [Example plugins?](#what-can-a-hoodie-plugin-do)
+
 
 **2. Prerequisites** 
 
@@ -49,7 +50,7 @@ If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an i
 
 Hoodie's API offers a small set of core features that handle data storage, sync and authentication. All other functionality you may need can be added by building plugins. Our goal is to so make Hoodie as extensible as possible, while keeping the core tiny, so you can add the modules _you_ need and just them.
 
-### What can Hoodie plugins do?
+### What can a hoodie plugin do
 
 In short, anything Hoodie can do. A plugin can work in Hoodie's Node.js backend and manipulate the database or talk to other services, it can extend the Hoodie frontend library's API, and it can appear in the admin dashboard that each Hoodie app has, and extend that with new stats, configurations and whatever else you can think of.
 
