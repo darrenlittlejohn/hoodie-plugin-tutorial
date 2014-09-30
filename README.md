@@ -92,14 +92,16 @@ Currently, the only way to get the backend component of a plugin to do anything 
         'to': 'Ricardo',
         'body': 'Hello there! How are things? We are hurtling through space! Wish you were here :)'
     });
-``
+```
 
 And in your backend component, listen for that task appearing and act upon it:
 
+```javascript
     hoodie.task.on('directmessage:add', function (dbName, task) {
         // generate a message object from the change data and
         // store it in both users' databases
     });
+```
 
 But we're getting ahead of ourselves. Let's do this properly and start at the beginning.
 
@@ -166,10 +168,13 @@ This is where you write any extensions to the client side hoodie object, should 
 
 from the browser in any Hoodie app, you can use the plugin's frontend component to expose something like
 
+```javascript
     hoodie.directMessages.send({
         'to': 'Ricardo',
         'body': 'One of your stripes is wonky'
     });
+```
+
 
 You've noticed I've used directMessages instead of our plugin's actual name "direct-messages", this is because, well, simply: I can. How and where you extend the hoodie object in the frontend is entirely up to you. Your plugin could even extend Hoodie in multiple places or override existing functionality.
 
@@ -183,15 +188,18 @@ In our case, this would be
 
 The code inside this is very straightforward:
 
+```javascript
     Hoodie.extend(function(hoodie) {
       hoodie.directMessages = {
         send: hoodie.task('directmessage').add,
         on: hoodie.task('directmessage').on // probably never needed
       };
     });
+```
 
 Now `hoodie.directMessages.send()` and `hoodie.directMessages.on()` actually exist. Here is `send()` in use:
 
+```javascript
     hoodie.directMessages.send(messageData)
     .done(function(messageTask){
         // Display a note that the message was sent
@@ -199,6 +207,7 @@ Now `hoodie.directMessages.send()` and `hoodie.directMessages.on()` actually exi
     .fail(function(error){
         console.log("Message couldn't be sent: ",error);
     })
+```
 
 __Note:__ the `hoodie.task.on()` listener accepts three different object selectors after the event type, just like `hoodie.store.on` does in the hoodie.js frontend library:
 
@@ -288,12 +297,14 @@ but for clarity, we'll just leave that out in this example.
 
 Anyway, we're nearly there, we just have to clean up after ourselves:
 
+```javascript
     function addMessageCallback(error, object) {
         if(error){
             return hoodie.task.error(originDb, message, error);
         }
         return hoodie.task.success(originDb, message);
     };
+```
 
 Again, Hoodie knows which task `success` refers to through the `message` object and the unique id therein. Once you've called `success` on a task, it will be marked as deleted, and the frontend component (which is listening for `'directmessage:'+message.id+':remove`) will trigger the original API call's success promise. The task's life cycle is complete.
 
@@ -301,9 +312,11 @@ Again, Hoodie knows which task `success` refers to through the `message` object 
 
 All that's left to do now is display the message in the recipient user's app view as soon as it is saved to their database. In the application's frontend code, we'd just
 
+```javascript
     hoodie.store.on('directmessage:add'), function(messageObject){
       // Show the new message somewhere
     });
+```
 
 Really basic Hoodie stuff. You can also call `hoodie.store.findAll('directmessage').done(displayAllMessages)`or any of the other `hoodie.store` methods to work with the new messages objects.
 
@@ -364,6 +377,7 @@ Admin Dashboard has a special version of Hoodie, called HoodieAdmin. It offers s
 
 It can be extended just like the standard Hoodie library:
 
+```javascript
     HoodieAdmin.extend(function(hoodieAdmin) {
       function send( messageData ) {
         var defer = hoodieAdmin.defer();
@@ -387,6 +401,7 @@ It can be extended just like the standard Hoodie library:
         on: on
       };
     });
+```
 
 Now `hoodie.directMessages.send` can be used the same way by the admin in admin-dashboard as it can be used by the users of the app. The only difference is that other users cannot send messages to the admin, as it's a special kind of account.
 
@@ -398,12 +413,15 @@ To get / set a plugin's config, you can use `hoodieAdmin.plugin.getConfig('direc
 
 For example, let's say you'd like to limit the message length to 140 characters. You'd build a corresponding form in your `admin-dashboard/index.html` with an input for a number (let's say 140), and bind this to the submit event:
 
+```javascript
     hoodieAdmin.plugin.updateConfig('direct-messages',
       { maxLength: valueFromInputField }
     );
+```
 
 Then in the backend, you could check for the setting and reject messages that are longer:
 
+```javascript
     if (message.body.length > hoodie.config('maxLength')) {
       var error = {
         error: 'invalid',
@@ -411,6 +429,7 @@ Then in the backend, you could check for the setting and reject messages that ar
       };
       return hoodie.task.error(originDb, message, error);
     }
+```
 
 #### The package.json
 
