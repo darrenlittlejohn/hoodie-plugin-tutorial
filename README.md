@@ -12,38 +12,40 @@ If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an i
 
 - [Introduction](#introduction)
 - [What can a hoodie plugin do?](#what-can-a-hoodie-plugin-do)
-- [Example plugins?](#what-can-a-hoodie-plugin-do)
+- [Example plugins?](#example)
 
 
 **2. Prerequisites** 
 
-- <a href="#prerequisites">Prerequisites</a>
-- <a href="#the-hoodie-architecture">The Hoodie Architecture</a>
-- <a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a>
+- [Prerequisites](#prerequisites)
+- [The Hoodie Architecture](#the-hoodie-architecture)
+- [The Plugin API and Tasks](#the-plugin-api-and-tasks)
 
 **3. Build a plugin** 
 
-- <a href="#lets-build-a-direct-messaging-plugin">Let's Build a Direct Messaging Plugin</a>
-- <a href="#how-will-this-work">How Will this Work?</a>
-- <a href="#where-to-start">Where to Start</a> <br/><br />
-- <a href="#structuring-a-plugin">Structuring a Plugin</a><br /><br />
-- <a href="#the-direct-messaging-plugins-frontend-component">The Direct Messaging Plugin's Frontend Component</a>
-- <a href="#the-direct-messaging-plugins-backend-component">The Direct Messaging Plugin's Backend Component</a>
-- <a href="#extending-admin-dashboard-with-your-plugins-own-admin-panel">Extending Admin Dashboard with your Plugin's own Admin Panel</a>
-<br /><br />
-- <a href="#the-packagejson"> The package.json </a>
+- [Let's Build a Direct Messaging Plugin](#lets-build-a-direct-messaging-plugin)
+- [How Will this Work?](#how-will-this-work)
+- [Where to Start](#where-to-start) 
+
+- [Structuring a Plugin](#structuring-a-plugin)
+
+- [The Direct Messaging Plugin's Frontend Component](#the-direct-messaging-plugins-frontend-component)
+- [The Direct Messaging Plugin's Backend Component](#the-direct-messaging-plugins-backend-component)
+- [Extending Admin Dashboard with your Plugin's own Admin Panel](#extending-admin-dashboard-with-your-plugins-own-admin-panel)
+
+- [ The package.json ](#the-packagejson)
 
 **4. Testing**
 
-- <a href="#writing-tests">Writing tests</a>
+- [Writing tests](#writing-tests)
 
 **5. Deployment**
 
-- <a href="#deploying-your-plugin-to-npm">Deploying your Plugin to NPM</a>
+- [Deploying your Plugin to NPM](#deploying-your-plugin-to-npm)
 
 **6. Start with the template**
 
-- <a href="#template-to-start">Start with the template</a>
+- [Start with the template](#template-to-start)
 
 
 ## Introduction
