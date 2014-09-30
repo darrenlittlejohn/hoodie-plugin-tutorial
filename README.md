@@ -1,24 +1,27 @@
-## Very Important:
+# Hood.ie plugin tutorial
 
-This tutorial is still a work in progress.
+> **Very Important:**
+> 
+> This tutorial is still a work in progress.
 If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an issue.
-
-Thank you! &lt;3
-
+> Thank you! &lt;3
 
 ## Table of Contents
 
-##### 1. Introduction
-- <a href="#introduction">Intro</a>
-- <a href="#what-is-a-hoodie-plugin">What is a Hoodie plugin?</a>
-- <a href="#what-can-a-hoodie-plugin-do">What can a Hoodie plugin do?</a>
+**1. Introduction** 
 
-##### 2. Prerequisites
+* [Intro](introduction)
+* [What is a hoodieplugin](what-is-a-hoodie-plugin)
+* [What can a Hoodie plugin do?](what-can-a-hoodie-plugin-do)
+
+**2. Prerequisites** 
+
 - <a href="#prerequisites">Prerequisites</a>
 - <a href="#the-hoodie-architecture">The Hoodie Architecture</a>
 - <a href="#the-plugin-api-and-tasks">The Plugin API and Tasks</a>
 
-##### 3. Build a plugin
+**3. Build a plugin** 
+
 - <a href="#lets-build-a-direct-messaging-plugin">Let's Build a Direct Messaging Plugin</a>
 - <a href="#how-will-this-work">How Will this Work?</a>
 - <a href="#where-to-start">Where to Start</a> <br/><br />
@@ -29,13 +32,16 @@ Thank you! &lt;3
 <br /><br />
 - <a href="#the-packagejson"> The package.json </a>
 
-##### 4. Testing
+**4. Testing**
+
 - <a href="#writing-tests">Writing tests</a>
 
-##### 5. Deployment
+**5. Deployment**
+
 - <a href="#deploying-your-plugin-to-npm">Deploying your Plugin to NPM</a>
 
-##### 6. Start with the template
+**6. Start with the template**
+
 - <a href="#template-to-start">Start with the template</a>
 
 
@@ -211,6 +217,8 @@ __First things first__: this component will be written in node.js, and node in g
 
 Let's look at the whole thing first:
 
+```javascript
+
     module.exports = function(hoodie) {
       hoodie.task.on('directmessage:add', handleNewMessage);
 
@@ -232,6 +240,7 @@ Let's look at the whole thing first:
         return hoodie.task.success(originDb, message);
       };
     };
+```
 
 Again, let's go through line by line.
 
