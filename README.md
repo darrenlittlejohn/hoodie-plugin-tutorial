@@ -428,7 +428,7 @@ if (message.body.length > hoodie.config('maxLength')) {
   };
   return hoodie.task.error(originDb, message, error);
 }
-``
+```
 
 #### The package.json
 
