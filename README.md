@@ -429,7 +429,7 @@ Then in the backend, you could check for the setting and reject messages that ar
       };
       return hoodie.task.error(originDb, message, error);
     }
-``
+```
 
 #### The package.json
 
