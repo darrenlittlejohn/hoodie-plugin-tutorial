@@ -6,7 +6,7 @@ If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an i
 Thank you! &lt;3
 
 
-## Table of Content
+## Table of Contents
 
 ##### 1. Introduction
 - <a href="#introduction">Intro</a>
