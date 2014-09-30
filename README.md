@@ -10,7 +10,7 @@ If you have any trouble, please ping us on irc.freenode.net/#hoodie or file an i
 
 **1. Introduction** 
 
-* [Intro](introduction)
+* [Introduction]
 * [What is a hoodieplugin](what-is-a-hoodie-plugin)
 * [What can a Hoodie plugin do?](what-can-a-hoodie-plugin-do)
 
