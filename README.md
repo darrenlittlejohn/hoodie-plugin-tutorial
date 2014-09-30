@@ -90,9 +90,9 @@ Currently, the only way to get the backend component of a plugin to do anything 
 ```javascript
     hoodie.task.start('directmessage', {
         'to': 'Ricardo',
-        'body': 'Hello there! How are things? We're hurtling through space! Wish you were here :)'
+        'body': 'Hello there! How are things? We are hurtling through space! Wish you were here :)'
     });
-```
+``
 
 And in your backend component, listen for that task appearing and act upon it:
 
