@@ -58,7 +58,7 @@ In short, anything Hoodie can do. A plugin can work in Hoodie's Node.js backend 
 
 ### Example plugins
 
-You could …
+[List of Hood.ie plugins](https://www.npmjs.org/search?q=hoodie-plugin)
 
 - log special events and send out emails to yourself whenever something catastrophic / wonderful happens (a bit like your own IFTTT for your app)
 - make Node.js resize any images uploaded to your app, generate a couple of thumbnail versions, save them to S3 or another server and reference them in your database
@@ -429,7 +429,7 @@ Then in the backend, you could check for the setting and reject messages that ar
       };
       return hoodie.task.error(originDb, message, error);
     }
-```
+``
 
 #### The package.json
 
